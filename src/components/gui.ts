@@ -3,7 +3,7 @@ import { SolarSystem } from "./solar-system";
 import { LAYERS } from "../constants";
 
 export const options = {
-  showPaths: false,
+  showPaths: true, // Cambiado a true para activar las líneas de las órbitas por defecto
   showMoons: true,
   focus: "Sun",
   clock: true,
@@ -49,6 +49,14 @@ export const createGUI = (
   gui.add(options, "speed", 0.1, 20, 0.1).name("Speed");
 
   gui.hide();
+
+  // Activar las líneas de las órbitas al iniciar la interfaz
+  for (const name in solarSystem) {
+    const object = solarSystem[name];
+    if (object.path) {
+      object.path.visible = options.showPaths;
+    }
+  }
 
   // Toggle ambient lights
   document.getElementById("btn-ambient")?.addEventListener("click", () => {

@@ -1,13 +1,13 @@
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { CSS2DRenderer } from "three/examples/jsm/renderers/CSS2DRenderer";
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
-import { createEnvironmentMap } from "./setup/environment-map";
-import { createLights } from "./setup/lights";
-import { createSolarSystem } from "./setup/solar-system";
-import { createGUI, options } from "./setup/gui";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { CSS2DRenderer } from "three/examples/jsm/renderers/CSS2DRenderer.js";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { createEnvironmentMap } from "./components/environment-map";
+import { createLights } from "./components/lights";
+import { createSolarSystem } from "./components/solar-system";
+import { createGUI, options } from "./components/gui";
 import { LAYERS } from "./constants";
 
 THREE.ColorManagement.enabled = false;
@@ -79,8 +79,12 @@ const changeFocus = (oldFocus: string, newFocus: string) => {
 // Camera
 const aspect = sizes.width / sizes.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-camera.position.set(0, 20, 0);
+camera.position.set(380, 100, 0);
+camera.zoom = 1.8; // Establecer el zoom inicial
+camera.updateProjectionMatrix(); // Asegúrate de actualizar la matriz de proyección
+
 solarSystem["Sun"].mesh.add(camera);
+
 
 // Controls
 const fakeCamera = camera.clone();

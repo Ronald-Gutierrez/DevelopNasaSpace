@@ -1,59 +1,68 @@
-# Solar System Model
+# Space Nasa Arequipa
 
-3D model of the solar system allowing traversal of all the planets. Provides labels showcasing points of interest on certain planets such as _Olympus Mons_ on Mars. This model was created using Three.js and is currently serving as a tool to enhance my learning whilst progressing through Three.js journey.
+# Proyecto: Estructura de Archivos
 
-## Current features
+## Descripción
+Este proyecto está estructurado en varios directorios y archivos para organizar los diferentes aspectos de la aplicación, como estilos, imágenes, fuentes y componentes. Está configurado con Vite, TypeScript y React. A continuación, se detalla la estructura de carpetas y archivos que debe seguirse:
 
-- Orbits
-- Textures
-- Loading screen
-- Environment
-- Lighting and Shadows
-- Moons
-- POI labels
-- Custom controls
-- Orbit paths
-- Sun bloom effect
+## Estructura del Proyecto
 
-## Planned changes
+<!-- src/  
+├── assets/  
+│   ├── css/  
+│   │   └── Loading.css  
+│   ├── images/  
+│   │   └── react.svg  
+│   └── fonts/  
+├── components/  
+│   └── Loading.tsx  
+├── App.tsx  
+└── main.tsx   -->
 
-- [ ] Earth night time texture
-- [ ] Planet information panel
-- [ ] Accuracy of distances
-- [ ] Improve shadow quality
+## Descripción de las Carpetas y Archivos
 
-## Setup
+- **src/**: Carpeta raíz que contiene todos los archivos fuente del proyecto.
+  - **assets/**: Directorio para almacenar recursos estáticos como estilos, imágenes y fuentes.
+    - **css/**: Carpeta para archivos de estilos CSS.
+      - **Loading.css**: Archivo de estilos CSS para el componente Loading.
+    - **images/**: Carpeta que almacena imágenes usadas en la aplicación.
+      - **react.svg**: Archivo SVG de la imagen de React.
+    - **fonts/**: Carpeta para fuentes personalizadas utilizadas en la aplicación.
+  - **components/**: Directorio que contiene los componentes de React.
+    - **Loading.tsx**: Componente React escrito en TypeScript para mostrar una animación de carga.
+  - **App.tsx**: Archivo principal de la aplicación donde se ensamblan los componentes.
+  - **main.tsx**: Archivo de entrada que inicializa la aplicación y monta el componente principal en el DOM.
 
-Download [Node.js](https://nodejs.org/en/download/).
-Run the following commands:
+## Recomendaciones
+- Asegúrate de seguir esta estructura para mantener el proyecto organizado y fácil de mantener.
+- Coloca los archivos de recursos (como imágenes y fuentes) en sus respectivas carpetas dentro de **assets/**.
+- Los componentes de React deben almacenarse en la carpeta **components/** y pueden tener sus propios archivos de estilo en **assets/css/** si es necesario.
+- **App.tsx** debe ser utilizado para gestionar la estructura principal de la aplicación, mientras que **main.tsx** se encarga de montar la aplicación en el DOM.
 
-```bash
-# Install dependencies
-npm install
-
-# Run the local server
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
+## Instalación y Configuración
+1. Clona el repositorio en tu máquina local.
+2. Navega al directorio del proyecto:
 ```
+   cd nombre-del-proyecto
 
-## Screenshots
+```
+3. Instala las dependencias necesarias utilizando npm o yarn:
+```
+   npm install
+   o
+   yarn install
+```
+4. Inicia la aplicación en modo de desarrollo:
+```
+   npm run dev
+   o
+   yarn dev
+```
+5. La aplicación estará disponible en http://localhost:5173
 
-![Sun](https://github.com/KyleGough/solar-system/assets/24881448/194f78d5-b35b-4661-bdae-85fd06f7a94f)
-![Earth](https://github.com/KyleGough/solar-system/assets/24881448/ca9ca06e-36a7-46f8-91cc-5942df1e3906)
-![Moon](https://github.com/KyleGough/solar-system/assets/24881448/d22fcdad-d7bc-4bf1-b026-9967317b1a69)
-![Mars](https://github.com/KyleGough/solar-system/assets/24881448/7b6806d4-d8ff-400e-8405-afb8f189acbc)
-![Neptune](https://github.com/KyleGough/solar-system/assets/24881448/a5677621-40ab-4aa5-a14e-f928010e1806)
 
-## Resources
+## Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-- **The Sun, Jupiter, Saturn, Uranus, and Neptune** - [https://www.solarsystemscope.com/textures/](https://www.solarsystemscope.com/textures/)
-- **Terrestrial Planets** - [https://planetpixelemporium.com/planets.html](https://planetpixelemporium.com/planets.html)
-- **Moon** - [https://svs.gsfc.nasa.gov/4720](https://svs.gsfc.nasa.gov/4720)
-- **Ganymede** - [https://www.deviantart.com/askaniy/art/Ganymede-Texture-Map-11K-808732114](https://www.deviantart.com/askaniy/art/Ganymede-Texture-Map-11K-808732114)
-- **Titan** - [https://planet-texture-maps.fandom.com/wiki/Titan](https://planet-texture-maps.fandom.com/wiki/Titan)
-- **Callisto** - [http://bjj.mmedia.is/data/callisto/](http://bjj.mmedia.is/data/callisto/)
-- **Io** - [https://phys.org/news/2014-12-solar-worlds-distant-exoplanets.html](https://phys.org/news/2014-12-solar-worlds-distant-exoplanets.html)
-- **Europa** - [https://www.johnstonsarchive.net/spaceart/cylmaps.html](https://www.johnstonsarchive.net/spaceart/cylmaps.html)
-- **Triton** - [https://www.go-astronomy.com/planets/neptune-moon-triton.htm](https://www.go-astronomy.com/planets/neptune-moon-triton.htm)
+
+¡Gracias por contribuir!
